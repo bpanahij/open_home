@@ -1,0 +1,24 @@
+{
+  "id": "/api/v1",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Connected Open Home",
+  "name": "Connected Open Home",
+  "type": "object",
+  "description": "Real-time analytics on open homes.",
+  "links": [
+    {
+      "title": "New Home",
+      "rel": "new_home",
+      "importance": "callToAction",
+      "method": "POST",
+      "href": "/api/v1/homes"
+    },
+    {
+      "title": "View Homes",
+      "rel": "view_homes",
+      "importance": "callToAction",
+      "method": "GET",
+      "href": "/api/v1/homes"
+    }
+  ]
+}

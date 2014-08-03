@@ -1,0 +1,74 @@
+{
+  "id": "/api/v1/homes",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Connected Open Home",
+  "name": "Connected Open Home",
+  "type": "object",
+  "description": "Real-time analytics on open homes.",
+  "properties": {
+    "homes": {
+      "type": "array",
+      "items": {
+        "properties": {
+          "homeId": {
+            "type": "integer"
+          },
+          "address": {
+            "type": "object",
+            "properties": {
+              "address1": {
+                "type": "string"
+              },
+              "address2": {
+                "type": "string"
+              },
+              "city": {
+                "type": "string"
+              },
+              "state": {
+                "type": "string"
+              },
+              "zip": {
+                "type": "number"
+              }
+            }
+          }
+        },
+        "links": [
+          {
+            "title": "View Home Analytics",
+            "rel": "home_analytics",
+            "importance": "callToAction",
+            "method": "GET",
+            "href": "/api/v1/homes/{homeId}",
+            "template": "/api/v1/homes/home",
+            "schema": {
+              "properties": {
+                "homeId": {
+                  "type": "string",
+                  "identity": true
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "links": [
+    {
+      "title": "New Home",
+      "rel": "new_home",
+      "importance": "callToAction",
+      "method": "POST",
+      "href": "/api/v1/homes"
+    },
+    {
+      "title": "View Homes",
+      "rel": "view_homes",
+      "importance": "callToAction",
+      "method": "GET",
+      "href": "/api/v1/homes"
+    }
+  ]
+}

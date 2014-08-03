@@ -1,0 +1,25 @@
+{
+  "name": "connected_open_home",
+  "version": "0.0.0",
+  "description": "A Connected Open Home for Real Estate Agents and Leasing Agents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian P. Johnson <brian@pjohnson.info> (http://www.pjohnson.info)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.6.1",
+    "hypermedia_server": "^0.1.2",
+    "mongoose": "^3.8.14"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-requirejs": "^0.4.4",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "rjs-build-analysis": "0.0.3"
+  }
+}
