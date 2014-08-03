@@ -2,24 +2,14 @@ var express = require('express')
   , http = require('http')
   , app = express()
   , mongoose = require('mongoose');
-/**
- * Hypermedia Server Config
- * @type {{rootDirectory: string, apiPrefix: string, limits: {uploadMB: string}, host: {port: number}}}
- */
-var config = {
-  rootDirectory: __dirname + '/media',
-  apiPrefix: '/api/v1',
-  limits: {
-    uploadMB: '50mb'
-  },
-  host: {
-    port: 8080
-  }
-};
+
+var config = require('config');
+config.rootDirectory = __dirname + "/media";
 /**
  *
  */
-mongoose.connect('mongodb://localhost/connected_open_home');
+mongoose.connect(config.mongodb.host);
+// mongodb://localhost/connected_open_home
 /**
  * Creating Express Server
  */

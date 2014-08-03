@@ -1,0 +1,12 @@
+{
+  "apiPrefix": "/api/v1",
+  "limits": {
+    "uploadMB": "50mb"
+  },
+  "host": {
+    "port": 80
+  },
+  "mongodb": {
+    "host": "mongodb://localhost/connected_open_home"
+  }
+}
