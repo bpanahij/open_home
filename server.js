@@ -8,12 +8,19 @@ config.rootDirectory = __dirname + "/media";
 /**
  *
  */
+var error = {};
+mongoose.connection.on('error', function(err) {
+  error = err;
+});
 mongoose.connect(config.mongodb.host);
-// mongodb://localhost/connected_open_home
 /**
  * Creating Express Server
  */
 var server = http.createServer(app);
+
+app.get('/mongo', function(req, res) {
+  res.json(error);
+});
 /**
  * Creating Hypermedia Server
  */
